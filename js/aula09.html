@@ -16,11 +16,13 @@
         res = "Aprovado com louvor"
     }
     else if (nota >= 60) {
-        res = "Aprovado"
+        res = "Aprovado";
     } else if (nota >= 40){
-        res = "Recuperação"
+        res = "Recuperação";
+    } else if (nota >= 20){
+        res = "Reprovado com louvor";
     } else {
-        res = "Reprovado"
+        res = "Reprovado";
     }
     document.write(res);
 </script>
