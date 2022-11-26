@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let mochila = [];
+    
+    mochila.push("Faca"); // insere elementos no final
+    mochila.push("Corda");
+    mochila.push("Pederneira");
+    mochila.push("Chave");
+    mochila.push("Lanterna");
+    mochila.unshift("Pedra"); // insere elementos no início
+
+    mochila.pop(); // retira o último elemento
+
+    mochila.shift(); // retira o primeiro elemento
+
+    mochila.splice(2,1); // remove elementos do meio (2 - posição, 3 - quantidade de elementos)
+
+
+    document.write(mochila[0] + "<br>");
+    document.write(mochila[1] + "<br>");
+    document.write(mochila[2] + "<br>");
+    document.write(mochila[3] + "<br>");
+    document.write(mochila[4] + "<br>");
+    document.write(mochila[5] + "<br>");
+</script>
+</html>
