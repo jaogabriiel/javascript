@@ -23,4 +23,11 @@ let nota1 = 7.5
 let nota2 = 5.5
 let nota3 = 4.0
 let notaFinal = nota1 + nota1 + nota3
-document.write(`Nota final: ${notaFinal} <br>`)
+document.write("Nota final: " + notaFinal + '<br> <hr>')
+
+let compra = 1999.99
+let desconto = 145.42
+let compraComDesconto = compra - desconto
+
+document.write(compraComDesconto.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) + '<br>')
+document.write(compraComDesconto)
