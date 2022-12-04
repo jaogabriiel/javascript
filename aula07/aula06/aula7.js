@@ -10,7 +10,7 @@ document.write(`Idade: ${idade}` + ' anos' + "<br>")
 document.write(`Peso: ${peso}` +  ' Kg' + "<br>")
 document.write(`Altura: ${altura}` + ' m' + "<br>" + "<hr>")
 
-document.write("Frase do dia" + "<br>");
+document.write(`<h2>Frase do dia</h2>` + "<br>");
 
 const dia = 03
 const mes = 12
@@ -22,6 +22,15 @@ document.write(dia + '/' + mes + '/' + ano + '<br>')
 document.write(frase + '<br>')
 document.write(autor + '<br>' + '<hr>')
 
-let meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
-document.write("Array de meses e ano<br>")
-document.write(meses[0] + ", " + meses[1] +", " + meses[2] +  ", " + meses[3] + ", " + meses[4] + ", " + meses[5] + ", " + meses[6] + ", " + meses[7] + ", " + meses[8] + ", " + meses[9] + ", " + meses[10] + ", " + meses[11])
+let meses = ["Janeiro"," Fevereiro"," Março"," Abril"," Maio"," Junho"," Julho"," Agosto"," Setembro"," Outubro"," Novembro"," Dezembro"]
+document.write(`<h2>Array de meses e ano</h2>` + "<br>")
+document.write(`${meses}` + "<hr>")
+
+let jogo = {
+    jogo: "GTA" ,
+    Desenvolvedora: "Rockstar Games" ,
+    ano: 2015
+}
+
+document.write(`<h2>Jogo</h2>` + "<br>")
+document.write("Jogo: " + jogo.jogo + "<br>" + "Desenvolvido por: " + jogo.Desenvolvedora + "<br>" + "Ano de lançamento: " + jogo.ano)
