@@ -28,6 +28,11 @@ h1, section, article {
     margin-bottom: 1rem;
 }
 
+img {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
 #botoes {
     display: inline-block;
     margin-bottom: 1rem;
@@ -66,5 +71,22 @@ button {
 
 .dark {
     background: #222;
+    color: #fff;
+}
+
+.azul {
+    background: darkblue;
+    color: #fff;
+}
+
+.escura {
+    background: rgba(58, 56, 56, 0.512);
+    color: #fff;
+    border-radius: 5PX;
+    padding: 10PX;
+}
+
+.amarela {
+    background: #ffc107;
     color: #fff;
 }
