@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgba(141, 131, 131, 0.673);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgba(70, 70, 235, 0.722);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+main {
+    background-color: aqua;
+
+}
+
+#txt {
+    background-color: rgb(132, 193, 71);
+    text-align: center;
+    height: 100px;
+    width: 150px;
+}
+
+img {
+    cursor: pointer;
+}
+
+img:hover {
+    border: 1px solid white;
+}
