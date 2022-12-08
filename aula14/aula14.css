@@ -59,8 +59,13 @@ input[type=number], input[type=text] {
 .botao {
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-left: 10px;
     padding: 5px;
     cursor: pointer;
+}
+
+.botao:hover {
+    border: 2px solid #ccc;
 }
 
 #resultadoImc {
@@ -72,15 +77,15 @@ input[type=number], input[type=text] {
     font-weight: bold;
 }
 
-/*
+/* 
 #btnEnviar {
     background: #1a237e;
 }
 
 #btnLimpar {
     background: #ff3d00;
-}
-*/
+} */
+
 
 /* DIV #resultado */
 #resultado {
