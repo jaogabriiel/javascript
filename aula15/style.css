@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+}
+
+header {
+    background-color: aqua;
+    align-items: center;
+    margin-left: -7px;
+    margin-top: -21px;
+    margin-bottom: -80px;
+}
+
+#principal {
+    display: flex;
+    background-color: rgb(104, 63, 171);
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+#d1 {
+    margin-bottom: 10px;
+    width: 700px;
+}
+
+#d2 {
+    margin-bottom: 10px;
+    width: 700px;
+}
+
+#d3 {
+    width: 700px;
+}
+
+.cx {
+    width: 100px;
+}
+
+.txt {
+    margin-left: 15px;
+    background-color: chocolate;
+}
+
+.btn {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 10px;
+    width: 700px;
+}
