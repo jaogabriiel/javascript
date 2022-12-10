@@ -1,12 +1,41 @@
-let form = document.querySelector('form')
-let n1 = document.querySelector('#num1')
-let n2 = document.querySelector('#num2')
-let b1 = document.querySelector('#btn1')
-let b2 = document.querySelector('#btn2')
-let res = document.querySelector('#resu')
+// Aula 15 - aplicação calculadora de Média
 
-b1.addEventListener('click', function(e){
-    let nota1 = n1.value
-    let nota2 = n2.value
-    let res = (nota1 + nota2 / 2)
-})
+let aviso = document.querySelector('#aviso')
+let formulario = document.querySelector('form')
+
+let btnCalcular = document.querySelector('#btnCalcular')
+let btnLimpar = document.querySelector('#btnLimpar')
+
+// selecionar caixas de texto por id
+let cxNota1 = document.querySelector('#nota1')
+let cxNota2 = document.querySelector('#nota2')
+let cxMedia = document.querySelector('#media')
+let cxSituacao = document.querySelector('#situacao')
+
+// calcular media
+function calcularMedia (n1, n2) {
+    return (n1 + n2) / 2
+}
+
+// definir situação final com base na média
+function situacaoFinal (mediaFinal) {
+    let situacaoFinal = ''
+
+    if (mediaFinal >= 7) {
+        situacaoFinal = 'Aprovado(a)'
+    } else if (mediaFinal <= 3) {
+        situacaoFinal = 'Reprovado(a)'
+    } else {
+        situacaoFinal = 'Recuperação'
+    }
+    return situacaoFinal
+}
+
+// formatar caixa de situação final
+function formatarSituacao (situacaoFinal) {
+    console.log('Situação Final ' + situacaoFinal)
+    switch(situacaoFinal) {
+        case 'Aprovado':
+            cxSituacao.classList.remove('reprovado')
+    }
+}
