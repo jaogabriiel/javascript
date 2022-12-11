@@ -1,3 +1,5 @@
+/* Aula 16 Virtual Dice */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 * {
@@ -16,7 +18,7 @@ body {
 main {
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 1rem; /* espacamento interno */
 }
 
 section {
@@ -65,19 +67,19 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-/* ANIMAR DADO */
+/* Animar o dado */
 @keyframes mover {
     0% {
-        transform: translateY(0px);  /* mover no eixo y vertical */
-        transform: rotate(45deg); /* rotacionar 90 graus* /
-        opacity: 0; /*opacidade 0 = 100% transparente*/
-    }
+        transform: translateY(0px); /* mover no eixo Y vertical */
+        transform: rotate(45deg);   /* rotacionar 90 graus */
+        opacity: 0; /* opacidade 0 = 100% transparente */
+       }
     50% {
-        transform: scale(50%); /* mudar tamanho para 50% */
+        transform:scale(50%); /* mudar tamanho para 50% */
     }
     100% {
-        transform: translateY(-15px); /* mover no eixo Y vertical*/
-        transform: rotate(-45deg); /* rotacionar -90 graus */
+        transform: translateY(-15px);  /* mover no eixo Y vertical */
+        transform: rotate(-45deg);     /* rotacionar -90 graus */
         opacity: 1; /* opacidade 1 = 0% transparente */
     }
 }
