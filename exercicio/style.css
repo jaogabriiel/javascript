@@ -34,3 +34,15 @@ img {
 img:hover {
     border: 1px solid white;
 }
+
+#nome {
+    background-color: rgb(185, 160, 160);
+    max-width: 400px; /* alinhar ao centro*/
+    margin: 20px auto;
+}
+
+#email {
+    background-color: rgb(185, 160, 160);
+    max-width: 400px;
+    margin: 20px auto;
+}
