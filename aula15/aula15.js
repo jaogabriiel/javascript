@@ -70,7 +70,7 @@ function validarNumero(numero) {
         formulario.reset() // limpar form
         aviso.textContent = 'Digite uma nota entre 0.0 e 10.0'
         aviso.classList.add('alerta')
-        setTimeout(function(){ // função que age com o tempo definifo
+        setTimeout(function(){ // função que age com o tempo definido
             aviso.textContent = '' // remove o texto de aviso
             aviso.classList.remove('alerta') // remove a classe
         }, 2000) // após 2 segundos
