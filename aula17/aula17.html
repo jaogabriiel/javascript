@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17 de JS</title>
+    <link rel="stylesheet" href="aula17.css">
+</head>
+<body onload="gerarNumeroSecreto()">
+    <main id="tela-inicial">
+        <div id="titulo"><h1>Adivinhar número secreto</h1></div>
+        <p class="centro" id="dica">Digite um número entre 1 e 10</p>
+        <section class="conteudos">
+            <input type="number" name="inputNumero" id="inputNumero" step="1" min="1" max="10" class="input animar" onblur="validarNumeroDigitado(this.value)" onclick="tocarMusicaDeFundo(); ativarBtnChutar()">
+
+            <button id="btnChutar" class="botao" onclick="jogar()">Chutar</button>
+            <button id="btnSom" class="botao" onclick="ativarDesativarMusica()">&#9835;</button>
+        </section>
+        <p class="centro" id="aviso"></p>
+    </main>
+
+    <audio preload="auto" autoplay loop id="musicaDeFundo" src="abertura-the-mentalist.mp3"></audio>
+</body>
+<script src="aula17.js"></script>
+</html>
