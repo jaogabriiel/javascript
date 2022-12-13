@@ -8,7 +8,7 @@
 }
 
 body {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     background: #ececec;
 }
@@ -36,7 +36,7 @@ section {
 
 h1 {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.75rem;
 }
 
 #titulo, #dica {
@@ -56,11 +56,84 @@ h1 {
     text-align: center;
 }
 
+#inputNumero {
+    border-radius: 5px;
+}
+
 .input {
     font-size: 1.5rem;
     text-align: center;
     padding: 5px;
     margin-bottom: 0.625rem;
     border: 1px solid #ccc;
+    border-radius: 5px solid #ccc;
     outline: none;
+}
+
+#btnChutar, #btnSom {
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+#btnChutar {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 10PX;
+}
+
+#btnChutar:hover, #btnSom:hover {
+    box-shadow: 1px 1px 5px #fff;
+}
+
+#numeroSecreto {
+    background: #d50000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+#aviso {
+    padding: 5px;
+    color: #fff;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.acertou {
+    background: green;
+}
+
+.errou {
+    background: red;
+}
+
+@keyframes piscar {
+    0% {
+        box-shadow: 0 0 25px #d50000;
+    }
+    100% {
+
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0;
+    }
+    from {
+        opacity: 1;
+    }
+}
+
+.animar {
+    animation: piscar 1s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease-in;
 }
