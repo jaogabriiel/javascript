@@ -1,5 +1,4 @@
 // AULA 18 CONVERSOR DE MOEDAS
-
 // SELECIONAR OS ELEMENTOS
 let valorDigitado = document.querySelector('#valorEmReal')
 
@@ -20,13 +19,13 @@ let valorDoBitcoin = 94129.92
 let valorEmReal = 0
 
 let moedaEstrangeira = ''
-let moedaCovertida = ''
+let moedaCovertida = 0.00
 
 // MENSAGEM FORMATADA PARA EXIBIR VALORES MONETÁRIOS
 function mensagemFormatada(moedaCovertida) {
-    isNaN(valorEmReal) ? valorEmReal = 0 :
+    isNaN(valorEmReal) ? valorEmReal = 0 : ''
     console.log('Moeda convertida ' + moedaCovertida)
-    aviso.textContent = "O valor " + (valorEmReal).toString('pt-Br', {style: 'currency', currency: 'BRL'}) + "convertido em " + moedaEstrangeira + " é " + moedaCovertida
+    aviso.textContent = "O valor " + (valorEmReal).toLocaleString('pt-Br', {style: 'currency', currency: 'BRL'}) + "convertido em " + moedaEstrangeira + " é " + moedaCovertida
 }
 
 // VERIFICAR SE FOI DIGITADO O VALOR PARA PODER CONVERTER
@@ -34,7 +33,7 @@ function bloquearBotao() {
     if(valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null) {
         btnConverter.setAttribute('disable', 'disabled')
         btnConverter.style.background = '#ccc'
-        btnConverter.style.cursos = 'not-allowed'
+        btnConverter.style.cursor = 'not-allowed'
     }
 }
 
@@ -43,7 +42,7 @@ function ativarBotao() {
     if (valorDigitado.value > 0) {
         btnConverter.removeAttribute('disabled')
         btnConverter.style.background = '#ffc107'
-        btnConverter.style.cursos = 'pointer'
+        btnConverter.style.cursor = 'pointer'
     } else {
         console.log('Não ativou')
     }
@@ -62,4 +61,43 @@ btnConverter.addEventListener('click', function() {
             console.log(moedaEstrangeira)
         }
     }
+
+    // USE UMA ESTRUTURA SWITCH CASE para escolher qual moeda estrangeira foi selecionada
+
+    switch(moedaEstrangeira) {
+
+        case 'Dolar':
+            moedaCovertida = valorEmReal / valorDoDolar
+            mensagemFormatada(moedaCovertida.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))
+            break
+    
+        case 'Euro':
+            moedaCovertida = valorEmReal / valorDoEuro
+            mensagemFormatada(moedaCovertida.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }))
+            break
+    
+        case 'Libra':
+            moedaCovertida = valorEmReal / valorDaLibra
+            mensagemFormatada(moedaCovertida.toLocaleString('en-GB', { style: 'currency', currency: 'GPB' }))
+            break
+    
+        case 'Bitcoins':
+            moedaCovertida = valorEmReal / valorDoBitcoin
+            mensagemFormatada(parseFloat(moedaCovertida).toFixed(5))
+            break
+    
+        default:
+            aviso.textContent = 'Escolha uma moeda para realizar a conversão'
+    }
+    isNaN(moedaCovertida) ? moedaCovertida = 0 : ''
+})
+
+btnLimpar.addEventListener('click', function() {
+    valorDigitado.focus()
+    valorDigitado.value = ''
+    aviso.textContent = 'Digite um valor, escolha a moeda e realize a conversão'
+    moedaSelecionada[0].checked = false
+    moedaSelecionada[1].checked = false
+    moedaSelecionada[2].checked = false
+    moedaSelecionada[3].checked = false
 })
