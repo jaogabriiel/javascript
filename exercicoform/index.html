@@ -4,37 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Calculadora de Média</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Calcule sua média</h1>
+        <p id="paragrafo">Insira suas notas abaixo</p>
+    </header>
     <main>
-        <header>
-            <h1>Cadastro</h1>
-            <p>Preencha os campos abaixo com suas informações</p>
-        </header>
         <form action="">
-            <fieldset>
-                <div>
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome">
+                <div class="div">
+                   <label for="nota1">Nota 1:</label>
+                   <input type="number" name="nota1" id="nota1" class="input" max="10.0" min="10.0" step="0.1" required onblur="validar()">
                 </div>
 
-                <div>
-                    <label for="idade">Idade:</label>
-                    <input type="number" name="idade" id="idade">
+                <div class="div">
+                   <label for="nota2">Nota 2:</label>
+                   <input type="number" name="nota2" id="nota2" class="input"
+                   max="10.0" min="10.0" step="0.1" required onblur="validar()">
                 </div>
 
-                <div>
-                    <label for="peso">Peso:</label>
-                    <input type="number" name="peso" id="peso">
+                <div class="div">
+                    <label for="nota3">Nota 3:</label>
+                    <input type="number" name="nota3" id="nota3" class="input"
+                    max="10.0" min="10.0" step="0.1" required onblur="validar()">
                 </div>
 
-                <div>
-                    <label for="altura">Altura:</label>
-                    <input type="number" name="alturs" id="altura">
+                <div class="div">
+                    <label for="nota4">Nota 4:</label>
+                    <input type="number" name="nota4" id="nota4" class="input"
+                    max="10.0" min="10.0" step="0.1" required onblur="validar()">
                 </div>
-            </fieldset>
+
+                <button type="submit" class="botao" id="enviar">Enviar</button>
+                <button type="reset" class="botao" id="limpar">Limpar</button><br>
+
+                <input type="text" name="aviso" id="aviso" value="Situação" disabled>
         </form>
     </main>
 </body>
+<script src="script.js"></script>
 </html>
