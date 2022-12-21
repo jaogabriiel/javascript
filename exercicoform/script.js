@@ -6,6 +6,7 @@ let cxN4 = document.querySelector('#nota4')
 let enviar = document.querySelector('#enviar')
 let limpar = document.querySelector('#enviar')
 let aviso = document.querySelector('#aviso')
+let cxMedia = document.querySelector('#media')
 
 function calcular(n1, n2, n3, n4) {
     return (n1 + n2 + n3 + n4) / 4
@@ -67,3 +68,26 @@ function validar() {
     }
 }
 
+enviar.addEventListener('click',function(e){
+    let num1 = cxN1.value
+    let num2 = cxN2.value
+    let num3 = cxN3.value
+    let num4 = cxN4.value
+    let media = calcular(num1, num2, num3,num4)
+
+    if (isNaN(media) || media > 10) {
+        cxMedia.textContent = "Informe os núemeros corretamente"
+        aviso.textContent = ''
+    } else {
+        cxMedia.value = parseFloat(media).toFixed(1)
+        aviso.textContent = situacao(media)
+    }
+    e.preventDefault()
+}) 
+
+limpar.addEventListener('click', function() {
+    cxMedia.textContent = ''
+    aviso.classList.remove('aprovado')
+    aviso.classList.remove('reprovado')
+    aviso.classList.remove('recuperacao')
+})

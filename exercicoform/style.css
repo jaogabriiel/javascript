@@ -73,3 +73,36 @@ main {
     text-align: center;
     font-weight: bolder;
 }
+
+#media {
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background-color: rgb(93, 87, 87);
+    color: white;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+.aprovado {
+    background-color: green;
+    color: white;
+}
+
+.reprovado {
+    background-color: red;
+    color: white;
+}
+
+.recuperacao {
+    background-color: yellow;
+    color: white;
+}
+
+.alerta {
+    background-color: red;
+    color: white;
+}
