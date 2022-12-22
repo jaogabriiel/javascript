@@ -1,27 +1,28 @@
-let titulo = document.querySelector('h1')
+let titulo     = document.querySelector('h1')
 let instrucoes = document.querySelector('#instrucoes')
-let aviso = document.querySelector('#aviso')
-let progresso = document.querySelector('#progresso')
-let pontos = 0
-let placar = 0
+let aviso      = document.querySelector('#aviso')
+let progresso  = document.querySelector('#progresso')
+let pontos = 0 // pontos para o placar
+let placar = 0 // placar
 
 // AUDIO
-let somAcerto = document.querySelector('#somAcerto')
-let somErro = document.querySelector('#somErro')
+let somAcerto   = document.querySelector('#somAcerto')
+let somErro     = document.querySelector('#somErro')
 let somAplausos = document.querySelector('#somAplausos')
 
 // PERGUNTA
 let numQuestao = document.querySelector('#numQuestao')
-let pergunta = document.querySelector('#pergunta')
+let pergunta   = document.querySelector('#pergunta')
 
 // ALTERNATIVAS
 let a = document.querySelector('#a')
 let b = document.querySelector('#b')
 let c = document.querySelector('#c')
+let d = document.querySelector('#d')
 
-//ARTICLE COM A CLASS QUESTOES
+// article com a class questoes
 let articleQuestoes = document.querySelector('.questoes')
-// OL LI COM AS ALTERNATIVAS
+// ol li com as alternativas
 let alternativas = document.querySelector('#alternativas')
 
 const q0 = {
@@ -33,7 +34,6 @@ const q0 = {
     alternativaD : "Alternativa D",
     correta      : "0",
 }
-
 const q1 = {
     numQuestao   : 1,
     pergunta     : "Boreal é o mesmo que...",
@@ -125,31 +125,33 @@ const q10 = {
     correta      : "5º maior",
 }
 
-// CONSTANTE COM UM ARRAY DE TODAS AS QUESTÕES
+// CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
 const questoes = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
 
 let numero = document.querySelector('#numero')
-let total = document.querySelector('#total')
+let total  = document.querySelector('#total')
 
 numero.textContent = q1.numQuestao
 
-let totalDeQuestoes = (questoes.length) - 1
+let totalDeQuestoes = (questoes.length)-1
+console.log("Total de questões " + totalDeQuestoes)
 total.textContent = totalDeQuestoes
 
-// MONTAR A 1° QUESTÃO COMPLETA
+// MONTAR A 1a QUESTAO COMPLETA, para iniciar o Quiz
 numQuestao.textContent = q1.numQuestao
-pergunta.textContent = q1.pergunta
+pergunta.textContent   = q1.pergunta
 a.textContent = q1.alternativaA
 b.textContent = q1.alternativaB
 c.textContent = q1.alternativaC
+d.textContent = q1.alternativaD
 
-// CONFIGURAR O VALUE INICIAL DA 1° QUESTÃO
+// CONFIGURAR O VALUE INICIAL DA 1a QUESTAO COMPLETA
 a.setAttribute('value', '1A')
 b.setAttribute('value', '1B')
 c.setAttribute('value', '1C')
 d.setAttribute('value', '1D')
 
-// PARA MONTAR AS PROXIMAS QUESTÕES
+// PARA MONTAR AS PROXIMAS QUESTOES
 function proximaQuestao(nQuestao) {
     numero.textContent = nQuestao
     numQuestao.textContent = questoes[nQuestao].numQuestao
@@ -163,8 +165,10 @@ function proximaQuestao(nQuestao) {
     c.setAttribute('value', nQuestao+'C')
     d.setAttribute('value', nQuestao+'D')
     progresso.value = parseInt(progresso.value) + 1
+    //console.log(progresso.value)
 }
 
+// VERIFICAR DUPLO CLICK NAS ALTERNATIVAS
 alternativas.addEventListener('dblclick', () => {
     //console.log('Duplo clique')
     pontos -= 10 // tirar 10 pontos em caso de duplo click
