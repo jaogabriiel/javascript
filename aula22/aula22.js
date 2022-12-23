@@ -31,6 +31,7 @@ let somAplausos = document.querySelector('#somAplausos')
 // ENDERECO DO ARQUIVO JSON
 const url = 'data.json'
 
+
 function pegarDados(i) {
 
   fetch(url).then(response =>{
@@ -51,10 +52,10 @@ function pegarDados(i) {
         
         // passe o valor de i no parametro
         atribuirDados(data, i)
-
       })
-      
+
 } // fim pegarDados
+
 
 function atribuirDados(data, i) {
   if(i >= data.questoes.length) {
@@ -155,5 +156,4 @@ function fimDoJogo() {
       proximaQuestao(1)
       instrucoes.textContent = 'Leia a questão e clique na resposta correta'
   }, 7000)
-
 }
